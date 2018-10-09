@@ -1,0 +1,33 @@
+h1, h2,p {
+
+    font-family: 'Roboto', sans-serif;
+}
+.section_dog {
+
+    float: right;
+    margin-right: 5%;
+    margin-top: -6%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tabla {
+
+    margin-top: 15%;
+    font-family: 'Roboto', sans-serif;
+}
+
+table  tr  td{
+
+    padding: 10px;
+    text-align: center;
+}
+
+td:nth-child(1),td:nth-child(2) {
+
+    border-bottom: 2px solid gray;
+}
+
+form {
+
+    font-family: 'Roboto', sans-serif;
+}
