@@ -1,0 +1,65 @@
+
+body {
+
+   
+  background: #ffd89b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffd89b, #19547b); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd89b, #19547b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container {
+    
+    width: 750px;
+	margin: 0px auto;	
+    
+}
+
+header {
+    
+    background-color: orange;
+    padding: 5%;
+    
+}
+
+header > h1{
+    
+    text-align: center;
+}
+
+main {
+    
+    margin-top: -20px;
+    height: 500px;
+    
+}
+
+section {
+    
+    margin-top: 50px;
+}
+
+
+.titulo {
+    
+    background-color: #968f8d;
+}
+
+.titulo > h2 {
+    
+    text-align: center;
+    padding: 10px;
+    background-color:  rgba(218,198,191,0.9);
+}
+
+.video {
+    
+    margin-left: 200px;
+    margin-top: -40px;
+}
+
+img {
+    
+    float: right;
+    margin-top: -105px;
+}
