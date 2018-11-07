@@ -1,6 +1,9 @@
+*{
+    margin: 0px auto;
+}
+
 .container {
 
-  margin: 0 auto;
   background-color: orange;
   width: 1024px;
 
