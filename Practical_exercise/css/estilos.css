@@ -1,0 +1,96 @@
+.container {
+
+  margin: 0 auto;
+  background-color: orange;
+  width: 1024px;
+
+}
+
+header {
+
+  width: 1024px;
+  background-color: purple;
+  height: 150px;
+  float: left;
+}
+
+nav {
+
+  width: 1024px;
+  background-color: red;
+  float: left;
+
+}
+
+
+nav a {
+
+	text-decoration: none;
+	background-color: #117A65;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+
+}
+
+ul {
+
+    text-align: center;
+    width: 870px;
+}
+
+ul li a:hover{
+
+  background-color: orange;
+  color: black;
+}
+
+ul, li {
+
+	display: inline-block;
+  margin-left: 20px;
+}
+
+li a {
+
+	display: block;
+	padding: 10px;
+	width: 110px;
+}
+
+
+
+section {
+
+  background-color: green;
+  height: 500px;
+  width: 724px;
+  float: left;
+
+}
+
+
+.articulo-1{
+
+  margin-top: 30px;
+  background-color: orange;
+  width: 600px;
+  height: 200px;
+  margin-left: 65px;
+}
+
+aside {
+
+    background-color: blue;
+    width: 300px;
+    height: 500px;
+    float: right;
+}
+
+footer {
+
+  background-color: gray;
+  width: 1024px;
+  height: 128px;
+  float: left;
+}
