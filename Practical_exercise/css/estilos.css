@@ -19,7 +19,8 @@ header {
 
 nav {
 
-  width: 1024px;
+  padding: 10px;
+  width: 1004px;
   background-color: red;
   float: left;
 
