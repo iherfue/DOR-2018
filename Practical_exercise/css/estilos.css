@@ -1,11 +1,10 @@
 *{
-    margin: 0 auto;
+    margin: 0px auto;
 }
-
 body {
   
   height: 100%;
-  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 
@@ -18,37 +17,29 @@ body {
 }
 
 header {
-
-  margin-top:10px;
+  background-color:black;
+  color:white;
   width: 1024px;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   height: 150px;
   float: left;
 }
-
 header > p {
-
   margin-top:40px;
   margin-left:260px;
   font-size: 50px;
-
 }
-
 header > img {
-
   margin-top: -75px;
   margin-right: 75px;
   float: right;
   width: 100px;
   height: 100px;
-
 }
-
 nav {
-
+  margin-top:10px;
   padding: 10px;
   width: 1004px;
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  background-color:#272727;
   float: left;
 
 }
@@ -57,7 +48,7 @@ nav {
 nav a {
 
 	text-decoration: none;
-	background-color: #117A65;
+	background-color: #000000;
 	color: white;
 	text-align: center;
 	border-radius: 10px;
@@ -92,24 +83,40 @@ li a {
 
 
 section {
-
-  background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
   height: 500px;
   width: 724px;
   float: left;
 
 }
 
-
-.articulo-1{
-
-  margin-top: 30px;
-  background-color: orange;
-  width: 600px;
-  height: 200px;
-  margin-left: 65px;
+.video-1 {
+  margin-left: 10px;
+  margin-top: -25px;
+}
+.video-2 {
+  margin-left: 10px;
+  margin-top: -25px;
+  float: left;
+}
+.video-3 {
+  margin-left: 200px;
+  margin-top: -50px;
 }
 
+.articulo-1{
+  width: 724px;
+  height: 200px;
+}
+.titulo{
+  background-color: #CB4335;
+  height: 500px;
+}
+.titulo > h2{
+  text-align: center;
+  padding: 10px;
+  background-color:#78281F;
+  color: white;
+}
 aside {
 
     background-color: blue;
@@ -120,7 +127,7 @@ aside {
 
 footer {
 
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-color:black;
   width: 1024px;
   height: 128px;
   float: left;
