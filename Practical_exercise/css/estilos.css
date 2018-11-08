@@ -1,5 +1,6 @@
 *{
     margin: 0px auto;
+  
 }
 body {
   
@@ -27,6 +28,7 @@ header > p {
   margin-top:40px;
   margin-left:260px;
   font-size: 50px;
+  font-family: 'Spicy Rice', cursive;
 }
 header > img {
   margin-top: -75px;
@@ -36,6 +38,8 @@ header > img {
   height: 100px;
 }
 nav {
+
+  font-family: 'Open Sans', sans-serif;
   margin-top:10px;
   padding: 10px;
   width: 1004px;
@@ -80,9 +84,8 @@ li a {
 	width: 110px;
 }
 
-
-
 section {
+
   height: 500px;
   width: 724px;
   float: left;
@@ -90,33 +93,51 @@ section {
 }
 
 .video-1 {
+
   margin-left: 10px;
   margin-top: -25px;
+
 }
+
 .video-2 {
+
   margin-left: 10px;
   margin-top: -25px;
   float: left;
+  
 }
+
 .video-3 {
+
   margin-left: 200px;
   margin-top: -50px;
+
 }
 
 .articulo-1{
+
   width: 724px;
   height: 200px;
+
 }
+
 .titulo{
+
   background-color: #CB4335;
   height: 500px;
+
 }
+
 .titulo > h2{
+
   text-align: center;
   padding: 10px;
   background-color:#78281F;
   color: white;
+  font-family: 'Gloria Hallelujah', cursive;
+
 }
+
 aside {
 
     background-color: blue;
@@ -128,7 +149,15 @@ aside {
 footer {
 
   background-color:black;
+  color: white;
+  text-align: center;
   width: 1024px;
   height: 128px;
   float: left;
+}
+
+footer > p {
+
+  margin-top: 64px;
+  font-family: 'Open Sans', sans-serif;
 }
