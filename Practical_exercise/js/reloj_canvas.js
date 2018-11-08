@@ -143,7 +143,7 @@ function renderTime() {
     //date
     ctx.fillStyle = color;
     ctx.font = '24px Arial';
-    ctx.fillText(dia, 170, 250);
+    ctx.fillText(dia, 160, 250);
     ctx.fillText(nombreDia, 55, 250);
     ctx.fillText(year, 200, 250);
 
