@@ -1,4 +1,4 @@
-var canvas = document.getElementById("canvas");
+﻿var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var color = '#59DF7A';
 ctx.strokeStyle = '#59df7a';
@@ -28,7 +28,7 @@ function renderTime() {
     var seconds = now.getSeconds();
     var milliseconds = now.getMilliseconds();
     var newSconds = seconds + (milliseconds / 1000);
-
+//console.log(diaSemana);
 
     //MES
     switch (diaSemana) { //Swicth con los meses segun la respuesta de getMonth el nombre del mes sera igual al mes
@@ -57,7 +57,7 @@ function renderTime() {
             nombreDia = "Sábado";
             break;
 
-        case 7:
+        case 0:
             nombreDia = "Domingo";
             break;
 
