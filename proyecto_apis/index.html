@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel ="stylesheet" href="css.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-    
-  <!-- Header -->
-  <div class="header">
-    <h1>Walkings trails in Fuerteventura</h1>
-  </div>
-  
-  <!-- Navigation Bar -->
-  <div class="navbar">
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-  </div>
-  
-  <!-- The flexible grid (content) -->
-  <div class="row">
-    <div class="side">
-        <h3>Network info</h3>
-        <p>Lorem ipsum dolor sit ame.</p>
-        <div class="fakeimg" style="height:60px;">Image</div><br>
-        <div class="fakeimg" style="height:60px;">Image</div><br>
-        <div class="fakeimg" style="height:60px;">Image</div>
-    </div>
-    <div class="main">
-        <div class="garden">
-            <div class="ball"></div>
-          </div>
-          
-          <pre class="output"></pre>
-          <script>
-                var ball   = document.querySelector('.ball');
-          var garden = document.querySelector('.garden');
-          var output = document.querySelector('.output');
-          var maxX = garden.clientWidth  - ball.clientWidth;
-          var maxY = garden.clientHeight - ball.clientHeight;
-          function handleOrientation(event) {
-            var x = event.beta;  // In degree in the range [-180,180]
-            var y = event.gamma; // In degree in the range [-90,90]
-            output.innerHTML  = "beta : " + x + "\n";
-            output.innerHTML += "gamma: " + y + "\n";
-            // Because we don't want to have the device upside down
-            // We constrain the x value to the range [-90,90]
-            if (x >  90) { x =  90};
-            if (x < -90) { x = -90};
-            // To make computation easier we shift the range of 
-            // x and y to [0,180]
-            x += 90;
-            y += 90;
-            // 10 is half the size of the ball
-            // It center the positioning point to the center of the ball
-            ball.style.top  = (maxX*x/180 - 10) + "px";
-            ball.style.left = (maxY*y/180 - 10) + "px";
-          }
-          window.addEventListener('deviceorientation', handleOrientation);
-          </script>  </div>
-    
-  </div>
-  
-  <!-- Footer -->
-  <div class="footer">
-    <h2>Footer</h2>
-  </div>
-  
-  </body>
-  </html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel ="stylesheet" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Walking Fuerteventura</title>
+        <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+    </head>
+    <body>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Walkings trails in Fuerteventura</h1>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html">Accelerometer</a>
+            <a href="geolocation.html">Geolocalización</a>
+            <a href="compass.html">Compass </a>
+        </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="side">
+                <h3>Network Information.</h3><br>
+                <script>
+                    navigator.connection.addEventListener('change', logNetworkInfo);
+                    console.log(navigator.connection);
+                    function logNetworkInfo() {
+                        document.write("Type: " + navigator.connection.type + "<br>");
+                        document.write("Downlink: " + navigator.connection.downlink + " mb/s <br>");
+                        document.write("RTT: " + navigator.connection.rtt + " ms<br>");
+                        document.write("Downlinkmax: " + navigator.connection.downlinkMax + " mb/s<br>");
+                        document.write("EffectiveType: " + navigator.connection.effectiveType + "<br>");
+                        document.write("SaveData: " + navigator.connection.saveData + "<br>");
+                    }
+                    logNetworkInfo();
+                </script>
+            </div>
+            <div class="main">
+                <div class="garden">
+                    <div class="ball"></div>
+                </div>
+
+                <pre class="output"></pre>
+                <script>
+                    var ball   = document.querySelector('.ball');
+                    var garden = document.querySelector('.garden');
+                    var output = document.querySelector('.output');
+                    var maxX = garden.clientWidth  - ball.clientWidth;
+                    var maxY = garden.clientHeight - ball.clientHeight;
+                    function handleOrientation(event) {
+                        var x = event.beta;  // In degree in the range [-180,180]
+                        var y = event.gamma; // In degree in the range [-90,90]
+                        output.innerHTML  = "beta : " + x + "\n";
+                        output.innerHTML += "gamma: " + y + "\n";
+                        // Because we don't want to have the device upside down
+                        // We constrain the x value to the range [-90,90]
+                        if (x >  90) { x =  90};
+                        if (x < -90) { x = -90};
+                        // To make computation easier we shift the range of 
+                        // x and y to [0,180]
+                        x += 90;
+                        y += 90;
+                        // 10 is half the size of the ball
+                        // It center the positioning point to the center of the ball
+                        ball.style.top  = (maxX*x/180 - 10) + "px";
+                        ball.style.left = (maxY*y/180 - 10) + "px";
+                    }
+                    window.addEventListener('deviceorientation', handleOrientation);
+                </script>    
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h2>Made by Iván Hernández Fuentes & Andrés Rodríguez Muñoz.</h2>
+        </div>
+    </body>
+</html>
