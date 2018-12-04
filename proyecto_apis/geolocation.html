@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel ="stylesheet" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Walking Fuerteventura</title>
+        <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Walkings trails in Fuerteventura</h1>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="index.html">Accelerometer</a>
+            <a href="geolocation.html">Geolocalización</a>
+            <a href="compass.html">Compass </a>
+        </div>
+        <div class="main_geo">  
+            <button type="button" onclick="showPosition();">Show me my position</button>
+            <div id="embedMap" style="width: 1300px; height: 590px;"></div>
+        </div>
+        </div>
+    <script>
+        function showPosition(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showMap, showError);
+            } else{
+                alert("Sorry, your browser does not support HTML5 geolocation.");
+            }
+        }
+
+        // Define callback function for successful attempt
+        function showMap(position){
+            // Get location data
+            lat = position.coords.latitude;
+            long = position.coords.longitude;
+            var mymap = L.map('embedMap').setView([lat, long],13);
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 16,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox.streets'
+            }).addTo(mymap);
+            L.marker([lat, long]).addTo(mymap)
+                .bindPopup("<b>You are here!</b>");
+        }
+
+        // Define callback function for failed attempt
+        function showError(error){
+            if(error.code == 1){
+                result.innerHTML = "You've decided not to share your position, but it's OK. We won't ask you again.";
+            } else if(error.code == 2){
+                result.innerHTML = "The network is down or the positioning service can't be reached.";
+            } else if(error.code == 3){
+                result.innerHTML = "The attempt timed out before it could get the location data.";
+            } else{
+                result.innerHTML = "Geolocation failed due to unknown error.";
+            }
+        }
+    </script> 
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Made by Iván Hernández Fuentes & Andrés Rodríguez Muñoz.</h2>
+    </div>
+    </body>
+</html>
