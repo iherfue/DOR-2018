@@ -16,7 +16,7 @@ body {
 .header {
     padding: 60px;
     text-align: center;
-     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);;
     color: black;
 }
 
@@ -60,7 +60,16 @@ body {
     background-color: white;
     padding: 196px 310px;
 }
-
+.main_geo {
+    flex: 70%;
+    background-color: white;
+    padding: 5px;
+}
+.main_comp {
+    flex: 70%;
+    background-color: white;
+    padding: 111px;
+}
 /* Fake image, just for this example */
 .fakeimg {
     background-color: #aaa;
@@ -78,18 +87,100 @@ body {
 
 
 .garden {
-  position: relative;
-  width : 200px;
-  height: 200px;
-  border: 5px solid #CCC;
-  border-radius: 10px;
+    position: relative;
+    width : 200px;
+    height: 200px;
+    border: 5px solid #CCC;
+    border-radius: 10px;
 }
 .ball {
-  position: absolute;
-  top   : 90px;
-  left  : 90px;
-  width : 20px;
-  height: 20px;
-  background: green;
-  border-radius: 100%;
+    position: absolute;
+    top   : 90px;
+    left  : 90px;
+    width : 20px;
+    height: 20px;
+    background: green;
+    border-radius: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+#compassHousing {
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: #CCC;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 62.5px;
+    padding: 2px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.77;
+    -moz-box-shadow: 2px 3px 10px 2px #333;
+    -webkit-box-shadow: 2px 3px 10px 2px #333;
+    box-shadow: 2px 3px 10px 2px #333;
+}
+#compassFace {
+    z-index: -1;
+    position: absolute;
+}
+#compassNeedle {
+    position: absolute;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: ease-out;
+}
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 1.0;
+    }
+    45% {
+        opacity: 0.20;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+@-moz-keyframes pulse {
+    0% {
+        opacity: 1.0;
+    }
+    45% {
+        opacity: 0.20;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+#map_graphics_layer {
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: pulse;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-name: pulse;
+}
+/* compass */
+@media(orientation: landscape) {
+    #compass {
+        margin-top: 20px;
+        margin-left: 20px;
+        opacity: 0.85;
+        filter: alpha(opacity=85);
+        position: absolute;
+        z-index: 2;
+    }
+}
+@media(orientation: portrait) {
+    #compass {
+        margin-top: 20px;
+        margin-left: 20px;
+        opacity: 0.85;
+        filter: alpha(opacity=85);
+        position: absolute;
+        z-index: 2;
+    }
 }
