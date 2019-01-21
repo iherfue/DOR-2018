@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Feel the Music</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://ilkeryilmaz.github.io/timelinejs/css/timeline.min.css" />
+  <link rel="stylesheet" href="https://ilkeryilmaz.github.io/timelinejs/css/prettify.css" />
+  <link href="css/foundation.css" rel="stylesheet" type="text/css" />
+  <link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/demo.css"/>
+  <script src="js/jquery.tiltedpage-scroll.js"></script>
+  <script src="js/jquery.tiltedpage-scroll.min.js"></script>
+  <link href="css/imagenes.css" type="text/css">
+  <script>
+    $(document).ready(function() {
+        $('.tooltip').tooltipster();
+    });
+    $('.tooltip').tooltipster({
+    theme: 'tooltipster-noir'
+});
+</script>
+ 
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="albums.html">Albums</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container text-center">    
+  <div class="row" style="margin-top: 2em;">
+    <div class="large-4 columns">
+      <h3>Some artists...</h3>
+      <p>#1 NF | #2 Post Malone</p>
+    </div>
+    <div class="large-8 columns">
+      <div class="twentytwenty-container">
+        <img src="img/nf.jpg" />
+        <img src="img/posty.jpg" />
+      </div>
+    </div>
+  </div>
+</div><br>
+<div class="col-dm-12 text-center">
+    <div class="main">
+        <section class="page1">
+            <h2 class="text-center">Albums</h2>
+            <img src="img/albums/Liran-Donins-1000-Boats-8-Songs.jpg" width="400" height="400">
+            <img src="img/albums/Nat-Birchall-Cosmic-Language.jpg" width="400" height="400">
+        </section>
+
+        <section class="page2">
+            <img src="img/albums/Julian-Siegel-Quartet-Vista.jpg" width="400" height="400">
+            <img src="img/albums/Elliot-Galvin-The-Influencing-Machine.jpg" width="400" height="400">
+        </section>
+        <section class="page3">
+            <img src="img/albums/Esbjorn-Svensson-Trio-e.s.t.-live-in-London.jpg" width="400" height="400">
+            <img src="img/albums/Brad-Mehldau-After-Bach.jpg" width="400" height="400">
+        </section>
+        <section class="page4">
+            <img src="img/albums/CharlesLloyd-VanishedGardens-Cover_1_1024x1024.jpg" width="400" height="400">
+            <img src="img/albums/album.jpg" width="400" height="400">
+        </section>
+    </div>
+</div>
+<div style="margin-top: 5%;background-color: #F2F2F2; padding: 20px">
+<footer class="container-fluid text-center">
+    <h3><strong>Ándres Rodriguez Muñoz & Iván Hernández Fuentes</strong></h3>
+	<p>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!" />
+    </a>
+</p>
+  </footer>
+</div>
+
+<script>
+ $(".main").tiltedpage_scroll({
+    sectionContainer: "> section",     // In case you don't want to use <section> tag, you can define your won CSS selector here
+    angle: 50,                         // You can define the angle of the tilted section here. Change this to false if you want to disable the tilted effect. The default value is 50 degrees.
+    opacity: true,                     // You can toggle the opacity effect with this option. The default value is true
+    scale: true,                       // You can toggle the scaling effect here as well. The default value is true.
+    outAnimation: true                 // In case you do not want the out animation, you can toggle this to false. The defaul value is true.
+  });
+</script>
+<script
+src="https://code.jquery.com/jquery-3.2.1.js"
+integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+crossorigin="anonymous"></script>
+  <script src="js/jquery.event.move.js"></script>
+  <script src="js/jquery.twentytwenty.js"></script>
+  <script>
+  $(function(){
+    $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
+    $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
+  });
+  </script>
+</body>
+</html>
