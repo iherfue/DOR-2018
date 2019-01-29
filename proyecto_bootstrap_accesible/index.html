@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="responsivevoice.js"></script>
@@ -47,76 +48,81 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-facetime-video"></span></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="active"><a href="#">Inicio</a></li>
+        <li><a href="#">Entradas</a></li>
+        <li><a href="#">Socios</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <!--Centro-->
 <div class="col-md-12">
-    <h2>ESTRENOS DE LA SEMANA</h2>
+    <h2 style="text-align: center">ESTRENOS DE LA SEMANA</h2>
     <button class="btn btn-default" id="oir-estrenos">Escuchar <img src="img/volume-up-solid.svg" alt="una imagen de volumen" longdesc="chart.html" width="20" height="20"></button>
+    <label for="opciones">Selección Idioma</label>
+    <select id="opciones">
+        
+    </select>
+    <br>
+    <br>
     <div class="row">
         <div class="col-md-2">
-            <img src="http://es.web.img3.acsta.net/c_150_200/pictures/18/10/31/17/44/5885767.jpg" alt="cartel un boxeador llamado creed y su jefe rocky" longdesc="chart.html">
+            <img src="img/rocky.jpg" alt="cartel un boxeador llamado creed y su jefe rocky" longdesc="chart.html">
             <p>Creed 2: La leyenda de Rocky</p>
         </div>
         <div class="col-md-2">
-            <img src="http://es.web.img3.acsta.net/c_150_200/pictures/18/12/18/12/47/4661911.jpg" alt="cartel pelicula familia al instante" longdesc="chart.html">
+            <img src="img/familia.jpg" alt="cartel pelicula familia al instante" longdesc="chart.html">
             <p>Familia al instante</p>
         </div>
         <div class="col-md-2">
-            <img src="http://es.web.img3.acsta.net/c_150_200/pictures/19/01/08/12/21/0702966.jpg" alt="cartel pelicula el blues de beale street" longdesc="chart.html">
+            <img src="img/el_blues.jpg" alt="cartel pelicula el blues de beale street" longdesc="chart.html">
             <p>El Blues de beale street</p>
         </div>
         <div class="col-md-2">
-            <img src="http://es.web.img2.acsta.net/c_150_200/pictures/18/12/18/13/08/2476106.jpg" alt="cartel pelicula the old man & the gun" longdesc="chart.html">
+            <img src="img/old_man.jpg" alt="cartel pelicula the old man & the gun" longdesc="chart.html">
             <p>The Old Man & The Gun</p>
         </div>
         <div class="col-md-2">
-            <img src="http://es.web.img3.acsta.net/c_150_200/pictures/18/12/05/12/21/3187909.jpg" alt="cartel pelicula el hombre de hielo" longdesc="chart.html">
+            <img src="img/otzi.jpg" alt="cartel pelicula el hombre de hielo" longdesc="chart.html">
             <p>Ötzi, el hombre del hielo</p>
         </div>
-        <label for="opciones">Selección Idioma</label>
-        <select id="opciones">
-            
-        </select>
     </div>
 </div>
 
 <div class="container text-center">    
-  <h3>What We Do</h3><br>
+  <h3>Trailer de la semana</h3><br>
   <div class="row">
-    <div class="col-sm-4">  
-      
-    </div>
+      <div class="col-sm-4">
+          <div class="well">
+           <p>Después de ser derrotados por Thanos la última vez y de que este último efectuara su malvado plan 
+             de eliminar a la mitad del universo, los Vengadores y los Guardianes de la Galaxia que quedan, entre 
+             otros superhéroes trataran de buscar la forma de como enfrentarse nuevamente al malvado titán y buscar 
+             como remediar el daño ocasionado por el chasquido del Guantelete del Infinito, siendo esta la gran batalla 
+             final que decidirá el destino y la vida del universo entero.</p>
+          </div>
+        </div>
     <div class="col-sm-4"> 
-      
-      <p>Project 2</p>    
+        <video width="320" height="240" controls>
+            <source src="video/vengadores.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="col-sm-4">
       <div class="well">
-       <p>Some text..</p>
-      </div>
-      <div class="well">
-       <p>Some text..</p>
+       <h4>Compra ya tus entradas y se el primero en ver "Vengadores: Endgame".</h4>
+       <button class="btn btn-primary">Comprar</button>
       </div>
     </div>
   </div>
 </div><br>
-
+<br><br><br><br><br>
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <h4>Iván Hernández Fuentes & Andrés Rodríguez Muñoz.</h4>
+  <img src="img/valid_html5_blue.png" class="rounded" width="90" alt="icono de validación HTML5">
+   <img src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v.png" width="90">
 </footer>
 
 <script src="voice_js_mejoras.js"></script>
